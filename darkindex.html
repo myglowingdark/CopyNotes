@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            margin: 0;
             background-color: #121212;
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: "Montserrat", sans-serif, Arial, sans-serif;
+            font-size: 14px;
         }
         .container {
             max-width: 500px;
@@ -22,15 +26,17 @@
             background: #333;
             padding: 20px;
             border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
         }
         .form-control {
             background-color: #222;
             color: #fff;
             border: 1px solid #444;
+            margin-bottom: 7px;
         }
-        .note-container .delete-btn{
+        .note-container .delete-btn {
             margin-left: 5px;
-
         }
         .note-container {
             display: flex;
@@ -59,7 +65,7 @@
             text-overflow: ellipsis;
         }
         .note-container .note-date {
-            font-size: 0.7em;
+            font-size: 0.8em;
             color: #ccc;
             text-align: right;
             flex-shrink: 0;
@@ -79,6 +85,21 @@
             content: "\f2ed"; /* FontAwesome filled trash icon */
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
+        }
+        #notesList {
+            max-height: 60vh; /* Adjust based on preference */
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        #notesList::-webkit-scrollbar {
+            width: 5px;
+        }
+        #notesList::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 10px;
+        }
+        #notesList::-webkit-scrollbar-thumb:hover {
+            background: #888;
         }
     </style>
 </head>
